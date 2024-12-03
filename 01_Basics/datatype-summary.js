@@ -38,3 +38,36 @@ const myfunction = function(){
 }
 
 console.log(typeof myfunction);
+
+
+
+//**********************************************************************
+
+//Types of memory
+
+// Stack(Primitive): original value will be changed in here 
+// Heap(Non-Primitive) : The reference of the memory will be given to work on
+
+let myName = "Akash"
+// the above will be stored in Stack memory
+
+let anotherName = myName // we are giving a copy of myName to anotherName not the memory refrence
+anotherName = "AK" // so change in anotherName doesn't effects myName
+
+console.log(anotherName);
+console.log(myName);
+
+
+let user1 ={
+    email : "user@gmail.com",
+    upi : "user@upi"
+}
+// the above object will be stored in heap memory
+// user1 is mapped to the starting address of the memory in heap
+
+user2 = user1 //Here we are not giving a copy of value we are giving reference to the memory where user1 is stored
+
+user2.email = "akash@gmail.com" //this will change the value in both user1 and user2
+
+console.log(user1.email);
+console.log(user2.email);
